@@ -1,0 +1,55 @@
+When should we use a database?
+	When you need to store information for users.
+What is the difference between Relational and non-relational databases?
+	Relation uses rows and columns and non uses whats is best for the information it is holding.
+What are some examples of each?
+	Microsoft sql server is an example of relational.  Mongo DB is an example of a non relational database.
+	What are some of the data types in postgresql?
+-Boolean		-Date
+-Numeric		-Array
+-Varchar
+-Integer
+
+What determines why we would choose one datatype over another?
+	Depends on what data we are storing.
+
+-- CREATE TABLE vacation (
+--   id SERIAL PRIMARY KEY,
+--   location VARCHAR(30),
+--   length_of_time NUMERIC(8),
+--   price NUMERIC(8,2),
+--   available BOOLEAN,
+--   comp_breakfast BOOLEAN
+--   );
+
+
+-- INSERT INTO vacation(location, length_of_time, price, available, comp_breakfast)
+-- VALUES('New York', 5, 599,TRUE, FALSE);
+
+-- SELECT * FROM vacation;
+
+-- INSERT INTO vacation(location, length_of_time, price, available, comp_breakfast)
+-- VALUES('Moon', 60, 5999.99, TRUE, TRUE);
+
+-- INSERT INTO vacation(location, length_of_time, price, available, comp_breakfast)
+-- VALUES('Gulag', 3, 10000, FALSE, TRUE);
+
+-- INSERT INTO vacation(location, length_of_time, price, available, comp_breakfast)
+-- VALUES('Tokyo', 30, 400, TRUE, FALSE);
+
+-- SELECT * FROM vacation
+-- WHERE price > 1000;
+
+-- SELECT * FROM vacation
+-- WHERE available IN (TRUE);
+
+-- SELECT * FROM vacation
+-- WHERE location LIKE '%New%';
+
+-- UPDATE vacation
+-- SET available = TRUE
+-- WHERE id = 4;
+
+-- SELECT * FROM vacation;
+
+-- DROP TABLE vacation;
